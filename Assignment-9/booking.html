@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Consultation</title>
+    <link  rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <h1>Doctor Consultation Booking Form</h1>
+
+    <!-- Booking Form -->
+    <form id="bookingForm">
+        <label for="name">Full Name:</label>
+        <input type="text" placeholder="Full Name" id="name" required>
+        <span id="nameError" class="error"></span>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Email" id="email" required>
+        <span id="emailError" class="error"></span>
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" placeholder="Enter 10-digit phone number" id="phone" maxlength="10" required>
+        <span id="phoneError" class="error"></span>
+        <br><br>
+
+        <label for="service">Select Service:</label>
+        <select id="service">
+            <option value="select" selected>Select</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Salon">Salon</option>
+            <option value="CarService">Car Service</option>
+        </select>
+        <span id="serviceError" class="error"></span>
+        <br><br>
+
+        <label for="dt">Date & Time:</label>
+        <input type="datetime-local" id="dt" required>
+        <span id="dtError" class="error"></span>
+        <br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">*I agree to the terms & conditions</label>
+        <span id="agreeError" class="error"></span>
+        <br><br>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <!-- Booked Appointments Table -->
+    <h2>Booked Appointments</h2>
+    <table id="appointmentsTable" border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Service Selected</th>
+                <th>Date & Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <!-- Confirmation Popup -->
+    <div id="confirmationPopup" class="popup">
+        <div class="popup-content">
+            <span id="popupClose" class="popup-close">&times;</span>
+            <p id="confirmationMessage"></p>
+        </div>
+    </div>
+
+    <script src="booking.js"></script>
+</body>
+</html>
