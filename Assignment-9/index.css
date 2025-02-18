@@ -1,1 +1,112 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #8ecae6;
+    width: 100%;
+    height: 5rem;
+}
+
+.section {
+    width: 90%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    border-radius: 2rem;
+    position: relative;
+    left: 5%;
+}
+
+.section > .sec1, .sec2, .sec3, .home, .sec4 {
+    width: 7rem;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 1.75rem;
+    position: relative;
+    top: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.section > .sec1, .sec2, .sec3, .home, .sec4 > p {
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(245, 222, 50);
+    z-index: 10;
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        width: 90%;
+        left: 5%;
+    }
+
+    .section > .sec1, .sec2, .sec3, .home, .sec4 {
+        width: 6rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .section > .sec1, .sec2, .sec3, .home, .sec4 {
+        width: 80%;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    img {
+        margin-top: 1rem;
+    }
+}
 
